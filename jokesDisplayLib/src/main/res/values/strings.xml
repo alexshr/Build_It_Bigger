@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">jokesDisplayLib</string>
+    <string name="title_activity_main">Display library activity</string>
+</resources>
