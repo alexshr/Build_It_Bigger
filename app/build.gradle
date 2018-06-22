@@ -68,29 +68,9 @@ dependencies {
     implementation project(':jokesProviderLib')
 }
 
-/*
-task startAppEngine (dependsOn: [":backend:appengineStart"]) {
 
-    doLast {
-        println "Server Started!"
-    }
-}
-
-task stopAppEngin{
-    dependsOn ':backend:appengineStop'
-
-    doLast{
-        println "Server Stopped!"
-    }
-}
-
-task appTests{
-    dependsOn ':app:test', ':app:connectedAndroidTest'
-}
-*/
 
 task runAllTests{
     dependsOn ':backend:appengineStart'
     finalizedBy ':app:test', ':app:connectedAndroidTest',':backend:appengineStop'
 }
-//,':app:test', ':app:connectedAndroidTest'
